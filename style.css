@@ -182,3 +182,10 @@ footer .footer-rights {
     text-align: center;
     padding: 12px 0;
 }
+nav img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top: 6px;
+
+}
