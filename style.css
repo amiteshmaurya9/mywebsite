@@ -12,37 +12,73 @@ body {
 }
 
 /* navigation bar*/
+
+
+
+/* close  */
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 80px;
     background-color: rgb(23, 23, 102);
+    cursor: pointer;
+
+
 }
 
 nav ul {
     display: flex;
     justify-content: center;
+position: relative;
 
 
 }
 
 nav ul li {
     list-style: none;
-    margin: 0px 23px;
+    /* margin: 10px 23px; */
+    position: relative;
+    /* float: left; */
+
 
 }
 
 nav ul li a {
     text-decoration: none;
+    padding: 10px 20px;
     color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 nav ul li a:hover {
-    color: #05EEFF;
-    font-size: 1.03rem;
+    background-color: #0586ff;
+    font-size: 16px;
 }
+/*    close navbar */
+nav ul li ul {
+    position: absolute;
+    list-style: 0;
+       left: 0%;
+       width: 200px;
+    background: rgb(18, 91, 147);
+    display: none;
+    font-size:14px ;
+    /* padding: 1px 1px; */
+    margin: 0%;}
 
+   
+
+
+nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    
+}
 /* main */
 .left {
     font-size: 1.5rem;
@@ -117,7 +153,7 @@ main hr {
 
 .secondsection .box {
     background: white;
-    width: 80vw;
+    width: auto;
     height: 1px;
     margin: 56px 0;
     display: flex;
@@ -149,8 +185,8 @@ main hr {
     position: relative;
     top: 86px;
     color: darkgray;
-    width: 150px;
-    font-size: 11px;
+    width: 200px;
+    font-size: 12px;
 
 }
 
@@ -189,3 +225,38 @@ nav img{
     margin-top: 6px;
 
 }
+@media screen and (max-width: 1440px) {
+   
+
+ .box{
+        flex-direction: column;
+    }
+
+
+
+}
+@media screen and (max-width: 670px) {
+   
+
+
+    .box{
+        flex-direction: column;
+    }
+    .secondsection .vertical{
+        height: unset;
+    }
+    .vertical-title, .vertical-desc{
+        left: 45px;
+    }
+    .secondsection .box{
+        width: 50vw;
+    }
+    footer{
+        display: none;
+    }
+    .firstsection{
+        flex-direction: column-reverse;
+    }
+nav{
+    flex-direction: column;
+}}
